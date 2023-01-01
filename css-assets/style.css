@@ -1,0 +1,192 @@
+:root {
+  --blue: rgb(75, 216, 235);
+  --black: rgba(12, 11, 11, 0.849);
+}
+::selection {
+  background-color: var(--blue);
+  color: var(--black);
+}
+
+/*set developer name and nav bar on the two sides*/
+header {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+/*adjust the developername section*/
+.developername {
+  background-color: var(--blue);
+  height: 60px;
+  padding: 0 30px;
+}
+/*adjust the font of developername section*/
+.developername p {
+  line-height: 60px;
+  font-size: 45px;
+}
+/*set the nav bar can be flexed*/
+nav ul,
+.partlink ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/*adjust the nav bar elements*/
+nav ul li,
+.partlink ul li {
+  border-bottom: 2px solid var(--blue);
+  margin-right: 30px;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+/*adjust the nav bar elements*/
+nav ul li a,
+.partlink ul li a {
+  color: var(--blue);
+  font-size: 20px;
+  line-height: 40px;
+}
+/*inset a banner between nav bar and main section*/
+.banner {
+  background-image: url(./images/Nav-background.jpg);
+  height: 180px;
+  position: relative;
+}
+/*set a subtitle in the banner*/
+.subtitle {
+  position: absolute;
+  bottom: 15px;
+  right: 35px;
+  background-color: var(--blue);
+  padding: 10px 20px;
+}
+/*adjust the font of subtitle*/
+.subtitle p {
+  font-size: 20px;
+  font-weight: bold;
+}
+/*general settings for aboutme section, work section, and contactme section*/
+.part {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+/*general settings for each section's left part*/
+.partleft {
+  width: 20%;
+  border-right: 3px solid black;
+  text-align: right;
+  padding-right: 30px;
+}
+.partleft p {
+  line-height: 50px;
+  font-size: 26px;
+  font-weight: bold;
+}
+/*general settings for each section's right part*/
+.partright {
+  width: 70%;
+}
+.parttext {
+  padding-bottom: 15px;
+}
+/*font setting for aboutme's right part*/
+.parttext p {
+  font-size: 12px;
+  line-height: 20px;
+}
+/*adjust self photo*/
+.selfphoto img {
+  border: 10px solid var(--black);
+  width: 50;
+}
+/*gengeral settings for app list*/
+.partleft li {
+  padding: 10px;
+}
+/*set the appname section and display in front of img*/
+.appname {
+  position: absolute;
+  background-color: var(--blue);
+  padding: 5px;
+  bottom: 10px;
+}
+.name {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+}
+.subname {
+  font-size: 20px;
+}
+/*set the img behind the appname section*/
+.partimgbig,
+.partimghalf,
+.partimgsmall {
+  position: relative;
+}
+/*flex setting for each app section, except the first app*/
+.partimgsmall {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/*add board and set width for the first app section*/
+.partimgbig img {
+  width: 100%;
+  border: 10px solid var(--blue);
+}
+/*set width and padding for the rest four app sections*/
+.partimghalf {
+  width: 49%;
+  padding-top: 2%;
+}
+/*add board and set width for the rest four app sections*/
+.partimghalf img {
+  width: 100%;
+  border: 10px solid var(--blue);
+}
+/*add shadow on each app section */
+.shadow:hover,
+.shadow:hover .appname {
+  box-shadow: inset 0px 0px 8px var(--blue), 0 0 15px var(--blue);
+}
+/*general settings for contact me section*/
+.partlink {
+  padding: 2%;
+}
+/*add flex for contact me section*/
+.partlink ul {
+  display: flex;
+  justify-content: space-around;
+}
+/*settings for small screen*/
+@media screen and (max-width: 760px) {
+  /*let developer name display in the middle*/
+  .developername {
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+  }
+  /*let each elements of nav bar move down and display in the middle*/
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    background-color: var(--black);
+    margin-right: 0;
+    margin-top: 0;
+  }
+  /*adjust the font in left part section, not excess the screen*/
+  .partleft p {
+    line-height: 40px;
+    font-size: 14px;
+  }
+  /*adjust the width for the four small app sections*/
+  .partimghalf {
+    width: 100%;
+  }
+}
