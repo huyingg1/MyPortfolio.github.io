@@ -148,7 +148,7 @@ nav ul li a,
   width: 100%;
   border: 10px solid var(--blue);
 }
-/*add shadow on each app section */
+/*add shadow for each app section */
 .shadow:hover,
 .shadow:hover .appname {
   box-shadow: inset 0px 0px 8px var(--blue), 0 0 15px var(--blue);
@@ -161,6 +161,10 @@ nav ul li a,
 .partlink ul {
   display: flex;
   justify-content: space-around;
+}
+.parttext p{
+  font-size: 20px;
+  font-weight: bold;
 }
 /*settings for small screen*/
 @media screen and (max-width: 760px) {
